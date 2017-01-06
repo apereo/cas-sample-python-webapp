@@ -77,3 +77,8 @@ body {
     border-bottom: 0;
   }
 }
+
+ /* RD: making vertical align great again */
+.table > tbody > tr > td {
+     vertical-align: middle;
+}
