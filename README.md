@@ -54,8 +54,11 @@ You will be redirected to a CAS server to authenticate and once you return,
 you should see the authenticated user id plus any and all attributes that
 the server may have authorized you to receive.
 
+![image](https://cloud.githubusercontent.com/assets/1205228/24905959/19cfc362-1ecb-11e7-8ac8-3dcdb82b9303.png)
+
 Remember that the application must be registered with the CAS server, and 
 should be authorized to authenticate.
+
 
 # Configuration
 
