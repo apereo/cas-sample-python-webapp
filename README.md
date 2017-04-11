@@ -31,7 +31,7 @@ sudo python setup.py install
 If you wish to not install plugin from source, simply execute:
 
 ```bash
-pip install Flask-CAS
+sudo pip install Flask-CAS
 ```
 
 # Run
