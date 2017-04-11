@@ -28,7 +28,7 @@ cd Flask-CAS
 sudo python setup.py install
 ```
 
-If you wish to not install plugin from source, simply execute:
+If you wish to not install the plugin from source, simply execute:
 
 ```bash
 sudo pip install Flask-CAS
