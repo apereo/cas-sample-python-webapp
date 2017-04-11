@@ -46,3 +46,21 @@ python app.py
 * Debugger is active!
 * Debugger PIN: 120-601-740
 ```
+
+# Test
+
+Navigate to `http://localhost:5000` and click on the login button.
+You will be redirected to a CAS server to authenticate and once you return,
+you should see the authenticated user id plus any and all attributes that
+the server may have authorized you to receive.
+
+# Configuration
+
+CAS configuration may be specified in `app.py`:
+
+```python
+app.config['CAS_SERVER'] = 'https://jasigcas.herokuapp.com' 
+app.config['CAS_AFTER_LOGIN'] = 'secure'
+```
+
+For all other relevant settings, please refer to the [Flask CAS extension](https://github.com/cameronbwhite/Flask-CAS) project.
