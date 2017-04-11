@@ -2,34 +2,28 @@
 <html lang="en">
  
 <head>
-    <title>Python Flask Bucket List App</title>
+    <title>CASified Python Flask Application</title> 
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
  
 <body>
- 
     <div class="container">
-         <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                   
-                </ul>
-            </nav>
-            <h3 class="text-muted">Python Flask App</h3>
-        </div>
- 
         <div class="jumbotron">
-            <h1>CAS Protected Secure Page</h1>
-            <p class="lead"></p>
-            <p>You have logged in via CAS. Hooray!</p>
+            <h2>CAS Protected Secure Page</h2>
+           
+            <p>Hooray! You are logged in as <b>{{cas.username}}</</b>.</p>
+
+            {% if cas.attributes %}
+                <p>The following attributes were released to you: <b>{{cas.attributes}}</</b>.</p>
+            {% else %}
+                <p>No attributes were released to you.</p>
+            {% endif %}
+
+            <p><a class="btn btn-primary" href="/logout" role="button">Logout</a>
         </div>
 
- 
-        <footer class="footer">
-            <p>&copy; Company 2015</p>
-        </footer>
- 
+          
     </div>
 </body>
  
