@@ -54,6 +54,9 @@ You will be redirected to a CAS server to authenticate and once you return,
 you should see the authenticated user id plus any and all attributes that
 the server may have authorized you to receive.
 
+Remember that the application must be registered with the CAS server, and 
+should be authorized to authenticate.
+
 # Configuration
 
 CAS configuration may be specified in `app.py`:
