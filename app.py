@@ -10,7 +10,7 @@ import logging
 
 app = Flask(__name__)
 cas = CAS(app, '/cas')
-app.config['CAS_SERVER'] = 'https://jasigcas.herokuapp.com'
+app.config['CAS_SERVER'] = 'https://casserver.herokuapp.com'
 app.config['CAS_AFTER_LOGIN'] = 'secure'
 # app.config['CAS_LOGOUT_ROUTE'] =
 # app.config['CAS_VALIDATE_ROUTE'] =
