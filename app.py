@@ -1,4 +1,5 @@
 from os import path, getcwd
+from sys import argv
 
 from flask import Flask, render_template, session, redirect, send_from_directory
 from flask_cas import CAS
@@ -50,6 +51,9 @@ def static_files(filename):
 
 
 if __name__ == "__main__":
+    if len(argv) >= 3 and argv[1] == '--server':
+        app.config['CAS_SERVER'] = argv[2]
+
     app.secret_key = 'super secret key'
     app.config['SESSION_TYPE'] = 'filesystem'
     app.debug = True
