@@ -7,16 +7,18 @@ import logging
 
 app = Flask(__name__)
 cas = CAS(app, '/cas')
-app.config['CAS_SERVER'] = 'https://jasigcas.herokuapp.com' 
+app.config['CAS_SERVER'] = 'https://jasigcas.herokuapp.com'
 app.config['CAS_AFTER_LOGIN'] = 'secure'
 # app.config['CAS_LOGOUT_ROUTE'] =
 # app.config['CAS_VALIDATE_ROUTE'] =
 # app.config['CAS_VALIDATE_ROUTE'] =
 
+
 @app.route("/logout")
 def logout():
     session.clear()
     return render_template('logout.html')
+
 
 @app.route("/secure")
 @login_required
@@ -29,13 +31,16 @@ def secure():
 
     return render_template('secure.html', cas=cas)
 
+
 @app.route("/caslogout")
 def caslogout():
     return redirect(app.config['CAS_LOGOUT_ROUTE'], code=302)
 
+
 @app.route("/")
 def main():
     return render_template('index.html')
+
 
 if __name__ == "__main__":
     app.secret_key = 'super secret key'
