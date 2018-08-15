@@ -1,4 +1,6 @@
-from flask import Flask, render_template, session, redirect
+from os import path, getcwd
+
+from flask import Flask, render_template, session, redirect, send_from_directory
 from flask_cas import CAS
 from flask_cas import login
 from flask_cas import logout
@@ -40,6 +42,11 @@ def caslogout():
 @app.route("/")
 def main():
     return render_template('index.html')
+
+
+@app.route("/<path:filename>")
+def static_files(filename):
+    return send_from_directory(path.join(getcwd(), 'static'), filename)
 
 
 if __name__ == "__main__":
