@@ -12,10 +12,13 @@
         <div class="jumbotron">
             <h2>CAS Protected Secure Page</h2>
            
-            <p>Hooray! You are logged in as <b>{{cas.username}}</</b>.</p>
+            <p>Hooray! You are logged in as <b>{{cas.username}}</b>.</p>
 
             {% if cas.attributes %}
-                <p>The following attributes were released to you: <b>{{cas.attributes}}</</b>.</p>
+                <p>The following attributes were released to you:</p>
+                <p><em>
+                    {{cas.attributes}}
+                </em></p>
             {% else %}
                 <p>No attributes were released to you.</p>
             {% endif %}
