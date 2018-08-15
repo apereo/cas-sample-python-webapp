@@ -1,0 +1,3 @@
+*.css inguist-vendored=false
+*.css linguist-detectable=false
+*.html linguist-detectable=false
