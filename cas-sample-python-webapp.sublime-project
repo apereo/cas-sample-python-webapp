@@ -1,0 +1,17 @@
+{
+    "folders":
+    [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python_interpreter": "$project_path/.env/bin/python",
+        "tab_size": 4,
+        "translate_tabs_to_spaces": true,
+        "use_tab_stops": true,
+        "detect_indentation": true,
+        "auto_complete_triggers": [{"selector": "source.python", "characters": "."}],
+        "auto_complete_function_params": "required"
+    }
+}

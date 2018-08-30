@@ -3,8 +3,8 @@
  
 <head>
     <title>CASified Python Flask Application</title> 
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
 </head>
  
 <body>
@@ -12,10 +12,13 @@
         <div class="jumbotron">
             <h2>CAS Protected Secure Page</h2>
            
-            <p>Hooray! You are logged in as <b>{{cas.username}}</</b>.</p>
+            <p>Hooray! You are logged in as <b>{{cas.username}}</b>.</p>
 
             {% if cas.attributes %}
-                <p>The following attributes were released to you: <b>{{cas.attributes}}</</b>.</p>
+                <p>The following attributes were released to you:</p>
+                <p><em>
+                    {{cas.attributes}}
+                </em></p>
             {% else %}
                 <p>No attributes were released to you.</p>
             {% endif %}

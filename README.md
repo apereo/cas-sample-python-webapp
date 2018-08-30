@@ -6,14 +6,14 @@ This is a sample Python web application using Flask that is protected via an Ape
 
 - Python
 
-```bash
+```console
 $ python --version
 Python 2.7.10
 ```
 
 - Pip
 
-```bash
+```console
 $ pip --version
 pip 9.0.1 from /Library/Python/2.7/site-packages (python 2.7)
 ```
@@ -36,8 +36,8 @@ sudo pip install Flask-CAS
 
 # Run
 
-```bash
-python app.py
+```console
+$ python app.py
 
 ...
 
@@ -58,6 +58,8 @@ the server may have authorized you to receive.
 
 Remember that the application must be registered with the CAS server, and 
 should be authorized to authenticate.
+
+You can find valid username and password under `cas.authn.accept.users` part of [CAS configuration part of CAS server dashboard](https://casserver.herokuapp.com/cas/status/config). It's `casuser`:`Mellon` for version 5.
 
 
 # Configuration

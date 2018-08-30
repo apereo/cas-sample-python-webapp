@@ -3,24 +3,24 @@
  
 <head>
     <title>CASified Python Flask Application</title> 
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
 </head>
  
 <body>
- 
+
     <div class="container">
         <div class="header">
             <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation">
-                        <a href="https://github.com/cas-projects/cas-sample-python-webapp">On Github</a>
+                <ul class="nav nav-pills justify-content-end">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="https://github.com/cas-projects/cas-sample-python-webapp">On Github</a>
                     </li>
-                    <li role="presentation">
-                        <a href="https://github.com/apereo/cas">CAS on Github</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="https://github.com/apereo/cas">CAS on Github</a>
                     </li>
-                    <li role="presentation">
-                        <a href="/secure">Login</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="/secure">Login</a>
                     </li>
                 </ul>
             </nav>
@@ -28,7 +28,7 @@
         </div>
  
         <div class="jumbotron">
-            <p><a class="btn btn-lg btn-success" href="/secure" role="button">Login with CAS</a>            </p>
+            <p><a class="btn btn-lg btn-success" href="/secure" role="button">Login with CAS</a></p>
         </div>
     </div>
 </body>
